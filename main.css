@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
+body {
+  background: #181f2a;
+  color: white;
+}
+
+p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+header,
+section,
+footer {
+  text-align: center;
+  padding: 2em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+.header-lg {
+  font-size: 2.7em;
+}
+
+.header-md {
+  font-size: 2em;
+}
+
+.header-sm {
+  font: 1.5em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+}
+nav .nav-ul {
+  display: flex;
+}
+nav .nav-ul li {
+  opacity: 0.8;
+  margin-left: 0.8em;
+}
+nav .nav-ul li a:hover {
+  opacity: 1;
+}
+
+header {
+  margin-bottom: 10em;
+}
+header .header_img {
+  width: 100%;
+}
+header p {
+  margin-bottom: 3em;
+}
+
+.btn-lg {
+  background: #339ecc;
+  padding: 1em 5em;
+  border-radius: 30px;
+  margin: 2em 0;
+  margin-bottom: 10em;
+}
+
+.btn-lg:hover {
+  background: #65e2d9;
+}
+
+.features_item {
+  margin-bottom: 6em;
+}
+
+.stay-prod {
+  text-align: left;
+}
+.stay-prod .stay-prod_img {
+  width: 100%;
+}
+
+.testimonials {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12em;
+}
+.testimonials .testimonials_item {
+  background: #202a3c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 250px;
+  margin-bottom: 3em;
+  padding: 0 1.2em;
+}
+.testimonials .testimonials_item p {
+  opacity: 0.8;
+  text-align: left;
+}
+.testimonials .testimonials_item .profile {
+  display: flex;
+}
+.testimonials .testimonials_item .profile .profile_imgcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15%;
+  margin-right: 0.7em;
+}
+.testimonials .testimonials_item .profile .profile_imgcon .profile_img {
+  border-radius: 100%;
+  width: 100%;
+}
+.testimonials .testimonials_item .profile .des p:nth-last-child(2) {
+  font-weight: bold;
+  margin: 0.3em;
+  font-size: 1.2em;
+  opacity: 1;
+}
+.testimonials .testimonials_item .profile .des p:nth-last-child(1) {
+  font-size: 0.9em;
+  margin: 0.3em;
+  opacity: 0.8em;
+}
+
+.footer-wrapper {
+  display: grid;
+}
+
+.footer {
+  background: #0b1523;
+  text-align: left;
+}
+.footer .social {
+  display: flex;
+  justify-content: center;
+}
+.footer .social li {
+  display: flex;
+  justify-content: center;
+  margin: 0 1em;
+}
+.footer div p a {
+  font-size: 1em;
+}
+
+.sign-up {
+  background: #1c2431;
+  margin: 0 1em;
+  padding: 0 3em;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.sign-up #email-input {
+  padding: 1.5em 4em;
+  border-radius: 60px;
+  outline: none;
+  margin-bottom: 2em;
+  font-size: 1em;
+}
+.sign-up .signup-btn {
+  background: #339ecc;
+  padding: 1em 4em;
+  border-radius: 60px;
+  color: white;
+  font-size: 1.3em;
+  outline: none;
+}
+.sign-up .signup-btn .signup-btn:hover {
+  background: #65e2d9;
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: #9396a5;
+}
+
+@media (min-width: 800px) {
+  main {
+    padding: 10em;
+  }
+
+  .nav-ul li {
+    opacity: 0.8;
+    margin-left: 2.2em !important;
+  }
+
+  header .header_img {
+    width: 70%;
+  }
+  header .des {
+    padding: 1em 14em;
+  }
+  header P {
+    padding: 0 14em;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 7em;
+    align-content: center;
+    margin-bottom: 5em;
+  }
+
+  .stay-prod {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5em;
+  }
+  .stay-prod .stay-prod_img {
+    width: 80%;
+  }
+
+  .testimonials {
+    display: flex;
+    flex-direction: row;
+  }
+  .testimonials .testimonials_item {
+    background: #202a3c;
+    margin: 0 1em;
+    text-align: left;
+  }
+
+  .footer div {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  }
+  .footer div .social {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
