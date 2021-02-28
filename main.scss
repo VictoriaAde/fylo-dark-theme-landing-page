@@ -226,7 +226,7 @@ header {
     text-align: center;
 
     #email-input {
-        padding: 1.5em 2.5em 1em;
+        padding: 1em 2.5em .8em;
         border-radius: 60px;
         outline: none;
         margin-bottom: 2em;
@@ -240,7 +240,7 @@ header {
     .signup-btn {
         background: base.$cta-dark;
         width: 100%;
-        padding: 1em 0;
+        padding: .6em 0;
         border-radius: 60px;
         color: base.$font-color;
         font-size: 1.3em;
@@ -269,8 +269,8 @@ header {
         padding: .4em 0;
 
         .logo-con {
-            margin-top: 1em;
-            width: 20%;
+            margin-top: 0.7em;
+            width: 35%;
 
             img {
                 width: 100%;
@@ -282,13 +282,30 @@ header {
         }
 
     }
+    .footer {
+        .logo-con {
+            margin-top: .7em;
+            width: 40%;
+            margin-bottom: 2em;
+
+            img {
+                width: 88%;
+            }
+        }
+    }
+
+    
+    .btn-lg {
+        background: base.$cta-dark;
+        padding: 1em 4em;
+    }
 
     .sign-up {
         padding: 2em 1em;
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
 
     main {
         padding: 10em;
@@ -319,12 +336,10 @@ header {
         }
 
         .des {
-            padding: 1em 14em;
+            padding: 1em 10em;
         }
 
-        P {
-            padding: 0 14em;
-        }
+       
     }
 
     .features {
@@ -364,12 +379,13 @@ header {
         padding: 2em 1em;
         display: inline;
         text-align: center;
-        height: 200px;
+        height: 250px;
         border-radius: 20px;
 
-        p{
+        p {
             padding: 0 5em 1em;
         }
+
         #email-input {
             padding: 1em 0 1em 2em;
             width: 40%;
@@ -378,7 +394,7 @@ header {
             margin-bottom: 2em;
             font-size: 1em;
         }
-    
+
         .signup-btn {
             background: base.$cta-dark;
             width: 25%;
@@ -420,4 +436,20 @@ header {
 
     }
 
+}
+
+@media (min-width: 1200px) {
+    header {
+        .header_img {
+            width: 70%;
+        }
+
+        .des {
+            padding: 1em 18em;
+        }
+        P {
+            padding: 0 8em;
+        }
+       
+    }
 }

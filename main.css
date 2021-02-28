@@ -187,7 +187,7 @@ header p {
   text-align: center;
 }
 .sign-up #email-input {
-  padding: 1.5em 2.5em 1em;
+  padding: 1em 2.5em 0.8em;
   border-radius: 60px;
   outline: none;
   margin-bottom: 2em;
@@ -199,7 +199,7 @@ header p {
 .sign-up .signup-btn {
   background: #339ecc;
   width: 100%;
-  padding: 1em 0;
+  padding: 0.6em 0;
   border-radius: 60px;
   color: white;
   font-size: 1.3em;
@@ -223,8 +223,8 @@ header p {
     padding: 0.4em 0;
   }
   nav .logo-con {
-    margin-top: 1em;
-    width: 20%;
+    margin-top: 0.7em;
+    width: 35%;
   }
   nav .logo-con img {
     width: 100%;
@@ -233,11 +233,25 @@ header p {
     padding-left: 0;
   }
 
+  .footer .logo-con {
+    margin-top: 0.7em;
+    width: 40%;
+    margin-bottom: 2em;
+  }
+  .footer .logo-con img {
+    width: 88%;
+  }
+
+  .btn-lg {
+    background: #339ecc;
+    padding: 1em 4em;
+  }
+
   .sign-up {
     padding: 2em 1em;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   main {
     padding: 10em;
   }
@@ -258,10 +272,7 @@ header p {
     width: 70%;
   }
   header .des {
-    padding: 1em 14em;
-  }
-  header P {
-    padding: 0 14em;
+    padding: 1em 10em;
   }
 
   .features {
@@ -299,7 +310,7 @@ header p {
     padding: 2em 1em;
     display: inline;
     text-align: center;
-    height: 200px;
+    height: 250px;
     border-radius: 20px;
   }
   .sign-up p {
@@ -342,6 +353,17 @@ header p {
   .footer div .social {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  header .header_img {
+    width: 70%;
+  }
+  header .des {
+    padding: 1em 18em;
+  }
+  header P {
+    padding: 0 8em;
   }
 }
 
