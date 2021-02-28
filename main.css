@@ -7,6 +7,7 @@ body {
 p {
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
+  opacity: 0.8;
 }
 
 li {
@@ -33,7 +34,7 @@ h3 {
 }
 
 .header-lg {
-  font-size: 2.7em;
+  font-size: 2em;
 }
 
 .header-md {
@@ -47,10 +48,11 @@ h3 {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 1em 1.5em;
+  padding: 0.4em 0.5em;
 }
 nav .nav-ul {
   display: flex;
+  margin-left: 0;
 }
 nav .nav-ul li {
   opacity: 0.8;
@@ -72,7 +74,7 @@ header p {
 
 .btn-lg {
   background: #339ecc;
-  padding: 1em 5em;
+  padding: 1em 7em;
   border-radius: 30px;
   margin: 2em 0;
   margin-bottom: 10em;
@@ -92,12 +94,25 @@ header p {
 .stay-prod .stay-prod_img {
   width: 100%;
 }
+.stay-prod li {
+  color: #9fa5a5;
+  display: inline;
+  border-bottom: solid 1px;
+  padding-bottom: 0.3em;
+  word-spacing: 0.2em;
+  cursor: pointer;
+}
+.stay-prod li .stay-prod_link {
+  color: #65e2d9;
+}
+.stay-prod li .stay-prod_link:hover {
+  color: #9fa5a5;
+}
 
 .testimonials {
   padding: 2em;
   display: flex;
   flex-direction: column;
-  margin-bottom: 12em;
 }
 .testimonials .testimonials_item {
   background: #202a3c;
@@ -145,6 +160,7 @@ header p {
 .footer {
   background: #0b1523;
   text-align: left;
+  padding-top: 16em;
 }
 .footer .social {
   display: flex;
@@ -160,9 +176,10 @@ header p {
 }
 
 .sign-up {
+  transform: translateY(200px);
   background: #1c2431;
   margin: 0 1em;
-  padding: 0 3em;
+  padding: 2em 3em;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -170,21 +187,26 @@ header p {
   text-align: center;
 }
 .sign-up #email-input {
-  padding: 1.5em 4em;
+  padding: 1.5em 2.5em 1em;
   border-radius: 60px;
   outline: none;
   margin-bottom: 2em;
   font-size: 1em;
 }
+.sign-up input::placeholder {
+  opacity: 0.6;
+}
 .sign-up .signup-btn {
   background: #339ecc;
-  padding: 1em 4em;
+  width: 100%;
+  padding: 1em 0;
   border-radius: 60px;
   color: white;
   font-size: 1.3em;
   outline: none;
+  cursor: pointer;
 }
-.sign-up .signup-btn .signup-btn:hover {
+.sign-up .signup-btn .signup-btn:focus {
   background: #65e2d9;
 }
 
@@ -196,12 +218,38 @@ header p {
   color: #9396a5;
 }
 
+@media (max-width: 375px) {
+  nav {
+    padding: 0.4em 0;
+  }
+  nav .logo-con {
+    margin-top: 1em;
+    width: 20%;
+  }
+  nav .logo-con img {
+    width: 100%;
+  }
+  nav .nav-ul {
+    padding-left: 0;
+  }
+
+  .sign-up {
+    padding: 2em 1em;
+  }
+}
 @media (min-width: 800px) {
   main {
     padding: 10em;
   }
 
-  .nav-ul li {
+  nav .logo-con {
+    margin-top: 0.7em;
+    width: 17%;
+  }
+  nav .logo-con img {
+    width: 80%;
+  }
+  nav .nav-ul li {
     opacity: 0.8;
     margin-left: 2.2em !important;
   }
@@ -244,6 +292,49 @@ header p {
     text-align: left;
   }
 
+  .sign-up {
+    transform: translate(214px, 120px);
+    width: 60%;
+    margin: 0 1em;
+    padding: 2em 1em;
+    display: inline;
+    text-align: center;
+    height: 200px;
+    border-radius: 20px;
+  }
+  .sign-up p {
+    padding: 0 5em 1em;
+  }
+  .sign-up #email-input {
+    padding: 1em 0 1em 2em;
+    width: 40%;
+    border-radius: 60px;
+    outline: none;
+    margin-bottom: 2em;
+    font-size: 1em;
+  }
+  .sign-up .signup-btn {
+    background: #339ecc;
+    width: 25%;
+    padding: 0.7em 0;
+    border-radius: 60px;
+    color: white;
+    font-size: 1.1em;
+    outline: none;
+    cursor: pointer;
+  }
+  .sign-up .signup-btn .signup-btn:focus {
+    background: #65e2d9;
+  }
+
+  .footer .logo-con {
+    margin-top: 0.7em;
+    width: 40%;
+    margin-bottom: 2em;
+  }
+  .footer .logo-con img {
+    width: 88%;
+  }
   .footer div {
     display: grid;
     grid-template-columns: 2fr 2fr 1fr 1fr 1fr;

@@ -10,6 +10,7 @@ body {
 p {
     font-size: base.$font-size;
     font-family: 'Open Sans', sans-serif;
+    opacity: .8;
 }
 
 li {
@@ -36,7 +37,7 @@ h3 {
 }
 
 .header-lg {
-    font-size: 2.7em;
+    font-size: 2em;
 }
 
 .header-md {
@@ -47,13 +48,15 @@ h3 {
     font: 1.5em;
 }
 
+
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 1em 1.5em;
+    padding: .4em .5em;
 
     .nav-ul {
         display: flex;
+        margin-left: 0;
 
         li {
             opacity: 0.8;
@@ -82,7 +85,7 @@ header {
 
 .btn-lg {
     background: base.$cta-dark;
-    padding: 1em 5em;
+    padding: 1em 7em;
     border-radius: 30px;
     margin: 2em 0;
     margin-bottom: 10em;
@@ -102,13 +105,30 @@ header {
     .stay-prod_img {
         width: 100%;
     }
+
+    li {
+        color: #9fa5a5;
+        display: inline;
+        border-bottom: solid 1px;
+        padding-bottom: .3em;
+        word-spacing: .2em;
+        cursor: pointer;
+
+        .stay-prod_link {
+            color: base.$cta-light;
+        }
+
+        .stay-prod_link:hover {
+            color: #9fa5a5;
+        }
+    }
+
 }
 
 .testimonials {
     padding: 2em;
     display: flex;
     flex-direction: column;
-    margin-bottom: 12em;
 
     .testimonials_item {
         background: base.$testimonials-background;
@@ -173,6 +193,7 @@ header {
 .footer {
     background: base.$footer-background;
     text-align: left;
+    padding-top: 16em;
 
     .social {
         display: flex;
@@ -194,9 +215,10 @@ header {
 }
 
 .sign-up {
+    transform: translateY(200px);
     background: base.$intro-and-email;
     margin: 0 1em;
-    padding: 0 3em;
+    padding: 2em 3em;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -204,22 +226,28 @@ header {
     text-align: center;
 
     #email-input {
-        padding: 1.5em 4em;
+        padding: 1.5em 2.5em 1em;
         border-radius: 60px;
         outline: none;
         margin-bottom: 2em;
         font-size: 1em;
     }
 
+    input::placeholder {
+        opacity: 0.6;
+    }
+
     .signup-btn {
         background: base.$cta-dark;
-        padding: 1em 4em;
+        width: 100%;
+        padding: 1em 0;
         border-radius: 60px;
         color: base.$font-color;
         font-size: 1.3em;
         outline: none;
+        cursor: pointer;
 
-        .signup-btn:hover {
+        .signup-btn:focus {
             background: base.$cta-light;
         }
     }
@@ -236,6 +264,29 @@ header {
 }
 
 
+@media (max-width: 375px) {
+    nav {
+        padding: .4em 0;
+
+        .logo-con {
+            margin-top: 1em;
+            width: 20%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .nav-ul {
+            padding-left: 0;
+        }
+
+    }
+
+    .sign-up {
+        padding: 2em 1em;
+    }
+}
 
 @media (min-width: 800px) {
 
@@ -243,11 +294,23 @@ header {
         padding: 10em;
     }
 
-    .nav-ul {
-        li {
-            opacity: 0.8;
-            margin-left: 2.2em !important;
+    nav {
+        .logo-con {
+            margin-top: .7em;
+            width: 17%;
+
+            img {
+                width: 80%;
+            }
         }
+
+        .nav-ul {
+            li {
+                opacity: 0.8;
+                margin-left: 2.2em !important;
+            }
+        }
+
     }
 
     header {
@@ -294,8 +357,56 @@ header {
         }
     }
 
+    .sign-up {
+        transform: translate(214px, 120px);
+        width: 60%;
+        margin: 0 1em;
+        padding: 2em 1em;
+        display: inline;
+        text-align: center;
+        height: 200px;
+        border-radius: 20px;
+
+        p{
+            padding: 0 5em 1em;
+        }
+        #email-input {
+            padding: 1em 0 1em 2em;
+            width: 40%;
+            border-radius: 60px;
+            outline: none;
+            margin-bottom: 2em;
+            font-size: 1em;
+        }
+    
+        .signup-btn {
+            background: base.$cta-dark;
+            width: 25%;
+            padding: .7em 0;
+            border-radius: 60px;
+            color: base.$font-color;
+            font-size: 1.1em;
+            outline: none;
+            cursor: pointer;
+
+            .signup-btn:focus {
+                background: base.$cta-light;
+            }
+        }
+
+    }
 
     .footer {
+        .logo-con {
+            margin-top: .7em;
+            width: 40%;
+            margin-bottom: 2em;
+
+            img {
+                width: 88%;
+            }
+        }
+
         div {
             display: grid;
             grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
