@@ -60,7 +60,7 @@ nav .logo-con img {
   width: 87%;
 }
 nav .navList-con {
-  transform: translate3d(20px, -290px, 20px);
+  transform: translate3d(20px, -350px, 20px);
   transition: 600ms;
   padding: 9em 1em 1em 3em;
   position: absolute;
