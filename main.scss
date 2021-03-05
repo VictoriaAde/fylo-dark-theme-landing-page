@@ -173,13 +173,13 @@ header {
 
 }
 
-.testimonials {
+#team {
     padding: 2em;
     display: flex;
     flex-direction: column;
 
-    .testimonials_item {
-        background: base.$testimonials-background;
+    .team_item {
+        background: base.$team-background;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -275,7 +275,7 @@ header {
     }
 }
 
-.sign-up {
+#sign-up {
     transform: translateY(200px);
     background: base.$intro-and-email;
     margin: 0 1em;
@@ -287,7 +287,9 @@ header {
     text-align: center;
 
     #email-input {
-        padding: 1em .8em .8em;
+        // padding: 1em 2.2em .8em;
+        padding: 1em 0 .7em ;
+        width: 100%;
         border-radius: 60px;
         outline: none;
         margin-bottom: 2em;
@@ -296,12 +298,14 @@ header {
 
     input::placeholder {
         opacity: 0.6;
+        padding-left: 1em;
     }
 
+   
     .signup-btn {
         background: base.$cta-dark;
         width: 100%;
-        padding: .9em 0;
+        padding: 1em 0;
         border-radius: 60px;
         color: base.$font-color;
         font-size: 1em;
@@ -352,7 +356,7 @@ header {
         padding: 1em 4em;
     }
 
-    .sign-up {
+    #sign-up {
         padding: 2em 1em;
     }
 }
@@ -425,7 +429,7 @@ header {
 
     }
 
-    .features {
+    #features {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 7em;
@@ -444,19 +448,19 @@ header {
         }
     }
 
-    .testimonials {
+    #team {
         display: flex;
         flex-direction: row;
         padding: 2em;
 
-        .testimonials_item {
-            background: base.$testimonials-background;
+        .team_item {
+            background: base.$team-background;
             margin: 0 1em;
             text-align: left;
         }
     }
 
-    .sign-up {
+    #sign-up {
         transform: translate(214px, 120px);
         width: 60%;
         margin: 0 1em;

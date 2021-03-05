@@ -19,9 +19,9 @@
     </div>
     <div class="navList-con">
       <ul class="nav-ul">
-        <li><a href="#" class="list-item">Features</a></li>
-        <li><a href="#" class="list-item">Team</a></li>
-        <li><a href="#" class="list-item">Sign In</a></li>
+        <li><a href="#features" class="list-item">Features</a></li>
+        <li><a href="#team" class="list-item">Team</a></li>
+        <li><a href="#sign-up" class="list-item">Sign In</a></li>
       </ul>
     </div>
     <a href="#" class="navMenu-icons" >
@@ -44,7 +44,7 @@
 
   <main>
 
-    <section class="features">
+    <section id="features">
       <div class="features_item">
         <img src="./images/icon-access-anywhere.svg" alt="icon-access-anywhere">
         <h3 class="header-sm"> Access your files, anywhere </h3>
@@ -94,8 +94,8 @@
       </div>
     </section>
 
-    <section class="testimonials">
-      <div class="testimonials_item">
+    <section id="team">
+      <div class="team_item">
         <p>
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
           become a well-oiled collaboration machine.
@@ -110,7 +110,7 @@
           </div>
         </div>
       </div>
-      <div class="testimonials_item">
+      <div class="team_item">
         <p>
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
           become a well-oiled collaboration machine.
@@ -125,7 +125,7 @@
           </div>
         </div>
       </div>
-      <div class="testimonials_item">
+      <div class="team_item">
         <p> Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
           become a well-oiled collaboration machine.
         </p>
@@ -143,16 +143,20 @@
   </main>
 
   <div class="footer-wrapper">
-    <div class="sign-up">
-      <h2 class="header-md"> Get early access today
-      </h2>
-      <p>
-        It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
-        questions, our support team would be happy to help you.
-      </p>
-      <input type="email" for="email" name="" id="email-input" placeholder="email@example.com">
-      <input type="submit" value="Get Started For Free" class="signup-btn">
-    </div>
+    <div id="sign-up">
+      <form action="">
+        <h2 class="header-md"> Get early access today
+        </h2>
+        <p>
+          It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+          questions, our support team would be happy to help you.
+        </p>
+        <input type="email" id="email-input" placeholder="email@example.com"  oninvalid="this.setCustomValidity('Please enter a valid email address')"
+        oninput="this.setCustomValidity('')" required>
+        <input type="submit" value="Get Started For Free" class="signup-btn">
+      
+      </form>
+      </div>
     <footer class="footer">
       <div class="logo-con">
       <img src="./images/logo.svg" alt="">

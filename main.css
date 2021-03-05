@@ -149,12 +149,12 @@ header p {
   color: #9fa5a5;
 }
 
-.testimonials {
+#team {
   padding: 2em;
   display: flex;
   flex-direction: column;
 }
-.testimonials .testimonials_item {
+#team .team_item {
   background: #202a3c;
   display: flex;
   flex-direction: column;
@@ -163,31 +163,31 @@ header p {
   margin-bottom: 3em;
   padding: 0 1.2em;
 }
-.testimonials .testimonials_item p {
+#team .team_item p {
   opacity: 0.8;
   text-align: left;
 }
-.testimonials .testimonials_item .profile {
+#team .team_item .profile {
   display: flex;
 }
-.testimonials .testimonials_item .profile .profile_imgcon {
+#team .team_item .profile .profile_imgcon {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 15%;
   margin-right: 0.7em;
 }
-.testimonials .testimonials_item .profile .profile_imgcon .profile_img {
+#team .team_item .profile .profile_imgcon .profile_img {
   border-radius: 100%;
   width: 100%;
 }
-.testimonials .testimonials_item .profile .des p:nth-last-child(2) {
+#team .team_item .profile .des p:nth-last-child(2) {
   font-weight: bold;
   margin: 0.3em;
   font-size: 1.2em;
   opacity: 1;
 }
-.testimonials .testimonials_item .profile .des p:nth-last-child(1) {
+#team .team_item .profile .des p:nth-last-child(1) {
   font-size: 0.9em;
   margin: 0.3em;
   opacity: 0.8em;
@@ -228,7 +228,7 @@ header p {
   font-size: 1em;
 }
 
-.sign-up {
+#sign-up {
   transform: translateY(200px);
   background: #1c2431;
   margin: 0 1em;
@@ -239,27 +239,29 @@ header p {
   justify-content: center;
   text-align: center;
 }
-.sign-up #email-input {
-  padding: 1em 0.8em 0.8em;
+#sign-up #email-input {
+  padding: 1em 0 0.7em;
+  width: 100%;
   border-radius: 60px;
   outline: none;
   margin-bottom: 2em;
   font-size: 1em;
 }
-.sign-up input::placeholder {
+#sign-up input::placeholder {
   opacity: 0.6;
+  padding-left: 1em;
 }
-.sign-up .signup-btn {
+#sign-up .signup-btn {
   background: #339ecc;
   width: 100%;
-  padding: 0.9em 0;
+  padding: 1em 0;
   border-radius: 60px;
   color: white;
   font-size: 1em;
   outline: none;
   cursor: pointer;
 }
-.sign-up .signup-btn:hover {
+#sign-up .signup-btn:hover {
   background: #65e2d9;
 }
 
@@ -294,7 +296,7 @@ header p {
     padding: 1em 4em;
   }
 
-  .sign-up {
+  #sign-up {
     padding: 2em 1em;
   }
 }
@@ -350,7 +352,7 @@ footer {
     padding: 1em 10em;
   }
 
-  .features {
+  #features {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 7em;
@@ -368,18 +370,18 @@ footer {
     width: 80%;
   }
 
-  .testimonials {
+  #team {
     display: flex;
     flex-direction: row;
     padding: 2em;
   }
-  .testimonials .testimonials_item {
+  #team .team_item {
     background: #202a3c;
     margin: 0 1em;
     text-align: left;
   }
 
-  .sign-up {
+  #sign-up {
     transform: translate(214px, 120px);
     width: 60%;
     margin: 0 1em;
@@ -389,10 +391,10 @@ footer {
     height: 250px;
     border-radius: 20px;
   }
-  .sign-up p {
+  #sign-up p {
     padding: 0 5em 1em;
   }
-  .sign-up #email-input {
+  #sign-up #email-input {
     padding: 1em 0 1em 2em;
     width: 40%;
     border-radius: 60px;
@@ -400,7 +402,7 @@ footer {
     margin-bottom: 2em;
     font-size: 1em;
   }
-  .sign-up .signup-btn {
+  #sign-up .signup-btn {
     background: #339ecc;
     width: 25%;
     padding: 0.9em 0;
@@ -410,7 +412,7 @@ footer {
     outline: none;
     cursor: pointer;
   }
-  .sign-up .signup-btn .signup-btn:focus {
+  #sign-up .signup-btn .signup-btn:focus {
     background: #65e2d9;
   }
 
