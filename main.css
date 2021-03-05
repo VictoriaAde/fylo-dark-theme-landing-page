@@ -2,6 +2,8 @@
 body {
   background: #181f2a;
   color: white;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 p {
@@ -48,18 +50,56 @@ h3 {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0.4em 0.5em;
+  padding: 1em 1em;
 }
-nav .nav-ul {
-  display: flex;
+nav .logo-con {
+  margin-top: 0.7em;
+  width: 35%;
+}
+nav .logo-con img {
+  width: 87%;
+}
+nav .navList-con {
+  transform: translate3d(20px, -290px, 20px);
+  transition: 600ms;
+  padding: 9em 1em 1em 3em;
+  position: absolute;
+  top: -1rem;
+  right: -5rem;
+  border-radius: 100%;
+  height: 165px;
+  width: 40%;
+}
+nav .navList-con .nav-ul {
+  display: inline;
   margin-left: 0;
 }
-nav .nav-ul li {
+nav .navList-con .nav-ul li {
   opacity: 0.8;
   margin-left: 0.8em;
+  padding: 0.5em;
 }
-nav .nav-ul li a:hover {
+nav .navList-con .nav-ul li a:hover {
   opacity: 1;
+}
+nav .navList-con.responsive {
+  position: absolute;
+  top: -7rem;
+  right: 1rem;
+  background: #0b1523;
+  transform: translate3d(20px, -20px, 20px);
+  transition: 500ms;
+}
+nav .navMenu-icons {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+nav .navMenu-icons .svg-inline--fa {
+  font-size: 1.4em;
+}
+nav .navMenu-icons .menuClose {
+  display: none;
 }
 
 header {
@@ -162,6 +202,19 @@ header p {
   text-align: left;
   padding-top: 16em;
 }
+.footer .logo-con {
+  padding-left: 2em;
+}
+.footer .svg-inline--fa {
+  padding-right: 1em;
+}
+.footer ul .list-param {
+  padding-top: 2em;
+  display: flex;
+}
+.footer ul li {
+  padding-bottom: 1.5em;
+}
 .footer .social {
   display: flex;
   justify-content: center;
@@ -187,7 +240,7 @@ header p {
   text-align: center;
 }
 .sign-up #email-input {
-  padding: 1em 2.5em 0.8em;
+  padding: 1em 0.8em 0.8em;
   border-radius: 60px;
   outline: none;
   margin-bottom: 2em;
@@ -199,14 +252,14 @@ header p {
 .sign-up .signup-btn {
   background: #339ecc;
   width: 100%;
-  padding: 0.6em 0;
+  padding: 0.9em 0;
   border-radius: 60px;
   color: white;
-  font-size: 1.3em;
+  font-size: 1em;
   outline: none;
   cursor: pointer;
 }
-.sign-up .signup-btn .signup-btn:focus {
+.sign-up .signup-btn:hover {
   background: #65e2d9;
 }
 
@@ -219,18 +272,12 @@ header p {
 }
 
 @media (max-width: 375px) {
-  nav {
-    padding: 0.4em 0;
-  }
-  nav .logo-con {
+  .logo-con {
     margin-top: 0.7em;
     width: 35%;
   }
-  nav .logo-con img {
+  .logo-con img {
     width: 100%;
-  }
-  nav .nav-ul {
-    padding-left: 0;
   }
 
   .footer .logo-con {
@@ -252,20 +299,48 @@ header p {
   }
 }
 @media (min-width: 900px) {
+  header,
+section,
+footer {
+    text-align: center;
+    padding: 2em;
+  }
+
   main {
     padding: 10em;
   }
 
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+  }
   nav .logo-con {
     margin-top: 0.7em;
     width: 17%;
   }
   nav .logo-con img {
-    width: 80%;
+    width: 70%;
   }
-  nav .nav-ul li {
+  nav .navList-con {
+    transform: none;
+    padding: 2.5em 0 0;
+  }
+  nav .navList-con .nav-ul {
+    margin-left: 0;
+  }
+  nav .navList-con .nav-ul li {
+    display: inline;
+    padding: 10px;
+    margin-right: 1.5rem;
     opacity: 0.8;
-    margin-left: 2.2em !important;
+    margin-left: 0.8em;
+  }
+  nav .navList-con .nav-ul li a:hover {
+    opacity: 1;
+  }
+  nav .navMenu-icons {
+    display: none;
   }
 
   header .header_img {
@@ -296,6 +371,7 @@ header p {
   .testimonials {
     display: flex;
     flex-direction: row;
+    padding: 2em;
   }
   .testimonials .testimonials_item {
     background: #202a3c;
@@ -327,10 +403,10 @@ header p {
   .sign-up .signup-btn {
     background: #339ecc;
     width: 25%;
-    padding: 0.7em 0;
+    padding: 0.9em 0;
     border-radius: 60px;
     color: white;
-    font-size: 1.1em;
+    font-size: 1em;
     outline: none;
     cursor: pointer;
   }
@@ -338,6 +414,13 @@ header p {
     background: #65e2d9;
   }
 
+  .footer ul .list-param {
+    padding-top: 0;
+    display: flex;
+  }
+  .footer ul li {
+    padding-bottom: 1.5em;
+  }
   .footer .logo-con {
     margin-top: 0.7em;
     width: 40%;

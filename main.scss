@@ -4,6 +4,8 @@
 body {
     background: base.$main-background;
     color: base.$font-color;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 
@@ -48,27 +50,73 @@ h3 {
     font: 1.5em;
 }
 
-
 nav {
     display: flex;
     justify-content: space-between;
-    padding: .4em .5em;
+    padding: 1em 1em;
 
-    .nav-ul {
-        display: flex;
-        margin-left: 0;
+    .logo-con {
+        margin-top: 0.7em;
+        width: 35%;
 
-        li {
-            opacity: 0.8;
-            margin-left: .8em;
-
-            a:hover {
-                opacity: 1;
-
-            }
+        img {
+            width: 87%;
         }
+    }
+
+    .navList-con {
+        transform: translate3d(20px, -290px, 20px);
+        transition: 600ms;
+        padding: 9em 1em 1em 3em;
+        position: absolute;
+        top: -1rem;
+        right: -5rem;
+        border-radius: 100%;
+        height: 165px;
+        width: 40%;
+
+        .nav-ul {
+            display: inline;
+            margin-left: 0;
+
+            li {
+                opacity: 0.8;
+                margin-left: .8em;
+                padding: .5em;
+
+                a:hover {
+                    opacity: 1;
+
+                }
+            }
+
+        }
+    }
+
+    .navList-con.responsive {
+        position: absolute;
+        top: -7rem;
+        right: 1rem;
+        background: base.$footer-background;
+        transform: translate3d(20px, -20px, 20px);
+        transition: 500ms;
 
     }
+
+    .navMenu-icons {
+        display: flex;
+        align-items: center;
+        z-index: 1;
+
+        .svg-inline--fa {
+            font-size: 1.4em;
+        }
+
+        .menuClose {
+            display: none;
+        }
+    }
+
 }
 
 header {
@@ -147,7 +195,6 @@ header {
         .profile {
             display: flex;
 
-            // justify-items: center;
             .profile_imgcon {
                 display: flex;
                 flex-direction: column;
@@ -181,8 +228,6 @@ header {
 
         }
 
-
-
     }
 }
 
@@ -195,6 +240,25 @@ header {
     text-align: left;
     padding-top: 16em;
 
+    .logo-con {
+        padding-left: 2em;
+    }
+
+    .svg-inline--fa {
+        padding-right: 1em;
+    }
+
+    ul {
+        .list-param {
+            padding-top: 2em;
+            display: flex;
+        }
+
+        li {
+            padding-bottom: 1.5em;
+        }
+    }
+
     .social {
         display: flex;
         justify-content: center;
@@ -203,9 +267,6 @@ header {
             display: flex;
             justify-content: center;
             margin: 0 1em;
-            // border: solid 1px;
-            // padding: .4em .5em;
-            // border-radius: 100%;
         }
     }
 
@@ -226,7 +287,7 @@ header {
     text-align: center;
 
     #email-input {
-        padding: 1em 2.5em .8em;
+        padding: 1em .8em .8em;
         border-radius: 60px;
         outline: none;
         margin-bottom: 2em;
@@ -240,16 +301,16 @@ header {
     .signup-btn {
         background: base.$cta-dark;
         width: 100%;
-        padding: .6em 0;
+        padding: .9em 0;
         border-radius: 60px;
         color: base.$font-color;
-        font-size: 1.3em;
+        font-size: 1em;
         outline: none;
         cursor: pointer;
+    }
 
-        .signup-btn:focus {
-            background: base.$cta-light;
-        }
+    .signup-btn:hover {
+        background: base.$cta-light;
     }
 
 }
@@ -263,25 +324,16 @@ header {
     }
 }
 
-
 @media (max-width: 375px) {
-    nav {
-        padding: .4em 0;
+    .logo-con {
+        margin-top: 0.7em;
+        width: 35%;
 
-        .logo-con {
-            margin-top: 0.7em;
-            width: 35%;
-
-            img {
-                width: 100%;
-            }
+        img {
+            width: 100%;
         }
-
-        .nav-ul {
-            padding-left: 0;
-        }
-
     }
+
     .footer {
         .logo-con {
             margin-top: .7em;
@@ -294,7 +346,7 @@ header {
         }
     }
 
-    
+
     .btn-lg {
         background: base.$cta-dark;
         padding: 1em 4em;
@@ -307,28 +359,60 @@ header {
 
 @media (min-width: 900px) {
 
+    header,
+    section,
+    footer {
+        text-align: center;
+        padding: 2em;
+    }
+
     main {
         padding: 10em;
     }
 
     nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2em;
+
         .logo-con {
             margin-top: .7em;
             width: 17%;
 
             img {
-                width: 80%;
+                width: 70%;
             }
         }
 
-        .nav-ul {
-            li {
-                opacity: 0.8;
-                margin-left: 2.2em !important;
+        .navList-con {
+            transform: none;
+            padding: 2.5em 0 0;
+
+            .nav-ul {
+                margin-left: 0;
+
+                li {
+                    display: inline;
+                    padding: 10px;
+                    margin-right: 1.5rem;
+                    opacity: 0.8;
+                    margin-left: .8em;
+
+                    a:hover {
+                        opacity: 1;
+
+                    }
+                }
+
             }
+        }
+
+        .navMenu-icons {
+            display: none;
         }
 
     }
+
 
     header {
         .header_img {
@@ -339,7 +423,6 @@ header {
             padding: 1em 10em;
         }
 
-       
     }
 
     .features {
@@ -364,6 +447,7 @@ header {
     .testimonials {
         display: flex;
         flex-direction: row;
+        padding: 2em;
 
         .testimonials_item {
             background: base.$testimonials-background;
@@ -398,10 +482,10 @@ header {
         .signup-btn {
             background: base.$cta-dark;
             width: 25%;
-            padding: .7em 0;
+            padding: .9em 0;
             border-radius: 60px;
             color: base.$font-color;
-            font-size: 1.1em;
+            font-size: 1em;
             outline: none;
             cursor: pointer;
 
@@ -413,6 +497,17 @@ header {
     }
 
     .footer {
+        ul {
+            .list-param {
+                padding-top: 0;
+                display: flex;
+            }
+
+            li {
+                padding-bottom: 1.5em;
+            }
+        }
+
         .logo-con {
             margin-top: .7em;
             width: 40%;
@@ -447,9 +542,10 @@ header {
         .des {
             padding: 1em 18em;
         }
+
         P {
             padding: 0 8em;
         }
-       
+
     }
 }

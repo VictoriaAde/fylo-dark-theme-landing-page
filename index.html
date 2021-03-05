@@ -10,9 +10,6 @@
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-
-  </style>
 </head>
 
 <body>
@@ -20,13 +17,17 @@
     <div class="logo-con">
       <img src="./images/logo.svg" alt="">
     </div>
-    <div>
+    <div class="navList-con">
       <ul class="nav-ul">
         <li><a href="#" class="list-item">Features</a></li>
         <li><a href="#" class="list-item">Team</a></li>
         <li><a href="#" class="list-item">Sign In</a></li>
       </ul>
     </div>
+    <a href="#" class="navMenu-icons" >
+      <i class="fas fa-bars menuIcon"></i>
+      <i class="fas fa-times menuClose"></i>
+    </a>
   </nav>
 
   <header>
@@ -89,7 +90,7 @@
         <p> Securely share files and folders with friends, family and colleagues for live collaboration. No email
           attachments required.
         </p>
-        <li> <a href="#" class="stay-prod_link"> See how Fylo works </a></li>
+        <li> <a href="#" class="stay-prod_link"> See how Fylo works <i class="fas fa-arrow-circle-right"></i> </a></li>
       </div>
     </section>
 
@@ -156,14 +157,13 @@
       <div class="logo-con">
       <img src="./images/logo.svg" alt="">
       </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua
-        </p>
+      <div class="footer-content">
         <ul>
-          <li><a href="" class="footer-link">+1-543-123-4567</a></li>
-          <li> <a href="" class="footer-link">example@fylo.com</a></li>
+          <li class="list-param"><i class="fas fa-map-marker-alt"></i>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua</li>
+          <li><a href="" class="footer-link"><i class="fas fa-phone-volume"></i> +1-543-123-4567</a></li>
+          <li> <a href="" class="footer-link"><i class="far fa-envelope"></i>  example@fylo.com</a></li>
         </ul>
         <ul>
           <li><a href="" class="footer-link">About Us</a></li>
@@ -194,7 +194,7 @@
 
   </div>
   <script src="https://kit.fontawesome.com/db9995df21.js" crossorigin="anonymous"></script>
-
+<script src="script.js"></script>
   <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> -->
   <!-- 
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
